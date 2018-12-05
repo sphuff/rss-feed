@@ -29,7 +29,6 @@ class App extends Component {
             })
             .catch(err => { 
                 console.log('ERR: ', err)
-                alert('Must enter valid RSS URL')
             })
     }
 
