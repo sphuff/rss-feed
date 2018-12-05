@@ -1,0 +1,1 @@
+export const PROXY_SERVER_URL = 'http://localhost:9001/api/'

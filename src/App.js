@@ -46,6 +46,7 @@ class App extends Component {
     }
 
     removeFeed(feed) {
+        const { feeds, selectedFeeds } = this.state
         this.setState({
             feeds: _.omit(feeds, feed), 
             selectedFeeds: _.without(selectedFeeds, feed)

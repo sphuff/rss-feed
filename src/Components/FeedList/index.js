@@ -18,7 +18,7 @@ export default class FeedList extends Component {
                 <li key={`${feedName}-container`} className={ classNames('feed-container', {'selected' : isSelected }) } onClick={ () => selectFeed(feedName) }>
                     <button className='feed-remove-btn' onClick={ (ev) => { 
                         ev.stopPropagation()
-                        removeFeed() 
+                        removeFeed(feedName) 
                     } }>X</button>
                     <h5 key={feedName} className='feed-name'>{ feedName }</h5>
                     <h5 key={`${feedName}-length`} className='feed-count'>{ entryNum }</h5>

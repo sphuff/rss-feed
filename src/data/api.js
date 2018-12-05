@@ -1,4 +1,5 @@
 import xml2js from 'xml2js'
+import { PROXY_SERVER_URL } from '../constants'
 
 function parseXML(xmlString) {
     const parser = new xml2js.Parser({explicitArray: false, mergeAttrs: true})
@@ -20,7 +21,8 @@ function parseEntries(xml) {
 }
 function getRssEntriesFromURL(url) {
     let feedTitle
-    return fetch(url)
+    const encodedURI = encodeURIComponent(url)
+    return fetch(`${PROXY_SERVER_URL}${encodedURI}`)
         .then(res => res.text())
         .then(unparsedXML => parseXML(unparsedXML))
         .then(parsedXML => parsedXML.channel ? parsedXML.channel : parsedXML)

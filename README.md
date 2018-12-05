@@ -1,3 +1,1 @@
-In order to run, you'll need to serve the webpage with `npm start`, and then go to `http://localhost:9000` by default. You will also need a CORS plugin for your browser in order to not encounter CORS errors. 
-
-If you choose to build the webapp, you'll need a static file server to serve it like [http-server](https://www.npmjs.com/package/http-server), as well as [potentially set a flag in Chrome](https://stackoverflow.com/questions/10752055/cross-origin-requests-are-only-supported-for-http-error-when-loading-a-local).
+In order to run, you'll need to serve the webpage with `npm start`, and then go to `http://localhost:9000` by default. To run the proxy server, run `npm run proxy-server` 
