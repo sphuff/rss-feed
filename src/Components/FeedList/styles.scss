@@ -1,0 +1,47 @@
+@import '../../main.scss';
+
+#feed-list {
+    flex: 0 0 12em;
+    order: -1;
+    #feed-list-header {
+        border-bottom: 3px solid #dddddd;
+        padding: 10px;
+    }
+    .feed-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10px;
+        cursor: pointer;
+        h4, h5 {
+            display: inline;
+        }
+
+        .feed-count {
+            color: #888888;
+        }
+        
+        &:not(.selected) {
+            > * {
+                color: #aaaaaa;
+            }
+        }
+
+        &:hover {
+            > * {
+                color: $base-color;
+            }
+
+            .feed-remove-btn {
+                display: block;
+            }
+        }
+
+        .feed-remove-btn {
+            display: none;
+            color: crimson;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+}

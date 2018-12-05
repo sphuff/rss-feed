@@ -1,0 +1,26 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+$base-font: 'Inter UI', sans-serif;
+
+$base-color: #76AFAE;
+
+h1, h2, h3, h4, h5, p, a {
+    color: #444444;
+    font-family: $base-font;
+}
+
+#app-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    header {
+        text-align: center;
+    }
+    #app-body {
+        flex: 1;
+        display: flex;
+        #rss-entry-list-container {
+            flex: 1;
+            padding: 0 40px;
+        }
+    }
+}
